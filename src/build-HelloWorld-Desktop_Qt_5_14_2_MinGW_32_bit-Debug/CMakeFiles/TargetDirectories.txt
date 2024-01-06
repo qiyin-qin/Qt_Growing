@@ -1,0 +1,4 @@
+D:/DeskTop/git/GitHub/Qt_Growing/src/build-HelloWorld-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/CMakeFiles/HelloWorld.dir
+D:/DeskTop/git/GitHub/Qt_Growing/src/build-HelloWorld-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/CMakeFiles/edit_cache.dir
+D:/DeskTop/git/GitHub/Qt_Growing/src/build-HelloWorld-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/DeskTop/git/GitHub/Qt_Growing/src/build-HelloWorld-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/CMakeFiles/HelloWorld_autogen.dir

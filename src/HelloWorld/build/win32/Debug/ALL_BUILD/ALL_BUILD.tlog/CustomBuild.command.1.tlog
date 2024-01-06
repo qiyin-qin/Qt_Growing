@@ -1,0 +1,10 @@
+^D:\DESKTOP\GIT\GITHUB\QT_GROWING\SRC\HELLOWORLD\CMAKELISTS.TXT
+setlocal
+F:\CMake\bin\cmake.exe -SD:/DeskTop/git/GitHub/Qt_Growing/src/HelloWorld -BD:/DeskTop/git/GitHub/Qt_Growing/src/HelloWorld/build --check-stamp-file D:/DeskTop/git/GitHub/Qt_Growing/src/HelloWorld/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
