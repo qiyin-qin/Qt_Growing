@@ -10,36 +10,25 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# QtCreator supports the following variables for Android, which are identical to qmake Android variables.
-# Check http://doc.qt.io/qt-5/deployment-android.html for more information.
-# They need to be set before the find_package(Qt5 ...) call.
-
-#if(ANDROID)
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-#    if (ANDROID_ABI STREQUAL "armeabi-v7a")
-#        set(ANDROID_EXTRA_LIBS
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libcrypto.so
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libssl.so)
-#    endif()
-#endif()
+set(BIN_EXECNAME ${PROJECT_NAME})
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-if(ANDROID)
-  add_library(HelloWorld SHARED
-    main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
+aux_source_directory(. SRC_LIST)
+
+add_executable(${BIN_EXECNAME} WIN32
+  ${SRC_LIST}
+  ${HEADERS}
+)
+
+target_link_libraries(${BIN_EXECNAME} PRIVATE Qt5::Widgets)
+
+if(MSVC)
+  # 设置可执行文件的输出路径（在 MSVC 中有效）
+  set_target_properties(${BIN_EXECNAME} PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/../../bin/${PROJECT_NAME}
+    RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/../../bin/${PROJECT_NAME}
   )
 else()
-  add_executable(HelloWorld
-    main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
-  )
+  set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../../bin/${PROJECT_NAME})
 endif()
-
-target_link_libraries(HelloWorld PRIVATE Qt5::Widgets)

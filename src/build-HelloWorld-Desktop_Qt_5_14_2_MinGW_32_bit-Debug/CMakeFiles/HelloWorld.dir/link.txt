@@ -1,3 +1,0 @@
-F:\CMake\bin\cmake.exe -E rm -f CMakeFiles\HelloWorld.dir/objects.a
-F:\Qt5.14.2\Tools\mingw730_32\bin\ar.exe qc CMakeFiles\HelloWorld.dir/objects.a @CMakeFiles\HelloWorld.dir\objects1.rsp
-F:\Qt5.14.2\Tools\mingw730_32\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\HelloWorld.dir/objects.a -Wl,--no-whole-archive -o HelloWorld.exe -Wl,--out-implib,libHelloWorld.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\HelloWorld.dir\linkLibs.rsp
