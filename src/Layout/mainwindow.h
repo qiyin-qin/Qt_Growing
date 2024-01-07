@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +19,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    QVBoxLayout             *layout;
+    QPushButton             *button1;
+    QPushButton             *button2;
+    QPushButton             *button3;  
 };
 #endif // MAINWINDOW_H
