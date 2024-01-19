@@ -6,16 +6,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    layout = new QVBoxLayout(this);
+    this->setMaximumSize(800,600);
+    this->setMinimumSize(800, 600);
 
-    button1 = new QPushButton("按钮1", this);
-    button2 = new QPushButton("按钮2", this);
-    button3 = new QPushButton("按钮3", this);
+    button1 = new QPushButton("按钮1");
+    button2 = new QPushButton("按钮2");
+    button3 = new QPushButton("按钮3");
+
+    layout = new QHBoxLayout(this);
 
     layout->addWidget(button1);
     layout->addWidget(button2);
     layout->addWidget(button3);
-    this->centralWidget()->setLayout(layout);
+    ui->centralwidget->setLayout(layout);
 }
 
 MainWindow::~MainWindow()

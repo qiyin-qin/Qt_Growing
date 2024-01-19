@@ -1,9 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QApplication>
 #include <QMainWindow>
 #include <QPushButton>
-#include <QVBoxLayout>
+#include <QHBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,9 +21,9 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    QVBoxLayout             *layout;
+    QHBoxLayout             *layout;
     QPushButton             *button1;
     QPushButton             *button2;
     QPushButton             *button3;  
 };
-#endif // MAINWINDOW_H
+#endif
