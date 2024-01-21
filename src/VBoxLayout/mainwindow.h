@@ -4,7 +4,7 @@
 #include <QApplication>
 #include <QMainWindow>
 #include <QPushButton>
-#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,7 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    QHBoxLayout             *layout;
+    QVBoxLayout             *layout;
     QPushButton             *button1;
     QPushButton             *button2;
     QPushButton             *button3;  

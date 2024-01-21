@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     button2 = new QPushButton("按钮2");
     button3 = new QPushButton("按钮3");
 
-    layout = new QHBoxLayout(this);
+    layout = new QVBoxLayout();
 
     layout->addWidget(button1);
     layout->addWidget(button2);

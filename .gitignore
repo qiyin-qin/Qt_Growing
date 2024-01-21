@@ -3,3 +3,5 @@ build/
 
 # 生成目标目录
 bin/
+
+.vscode/
