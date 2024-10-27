@@ -32,3 +32,9 @@ if(MSVC)
 else()
   set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../../bin)
 endif()
+
+# 设置编译器选项
+if(MSVC)
+    # 禁用 SAFESEH
+    target_link_options(${BIN_EXECNAME} PRIVATE "/SAFESEH:NO")
+endif()
